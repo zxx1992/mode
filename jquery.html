@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <input id="input">
+    <ul id="list">
+
+    </ul>
+    <button id="btn" type="button" onclick="test()">mpv</button>
+</div>
+<script>
+    function test() {
+        var input = $("#input");
+        var inputVal = $("#input").val();
+        var list = $("#list");
+        list.append("<li>" + inputVal + "</li>")
+        input.val("")
+    }
+</script>
+</body>
+</html>
+<!--面向dom编程-->
+<!--mvp模式-->
+<!--主要操作dom-->

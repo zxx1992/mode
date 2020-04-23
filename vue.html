@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+<input v-model="inputVal">
+    <ul>
+        <li v-for="item in list">{{item}}</li>
+    </ul>
+    <button @click="handleClick">MVVM</button>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            list:[],
+            inputVal: ""
+        },
+        methods: {
+            handleClick() {
+                this.list.push(this.inputVal);
+                this.inputVal = ""
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
+<!--面向数据编程-->
+<!--mvvm模式-->
+<!--主要操作数据-->
